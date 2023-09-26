@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3</title>
+</head>
+<body background="sailormoon1.jpg">
+    <h2><p align="left">Kalkulator</p></h2>
+        Bilangan Pertama<br>
+        <input type="number" id="angka1" name="bil1" placeholder="input bilangan"><br>
+        Bilangan Kedua<br>
+        <input type="number" id="angka2" name="bil2" placeholder="input bilangan"><br> 
+        <td>
+        <button onclick="hitung('+')">+</button>
+        <button onclick="hitung('-')">-</button>
+        <button onclick="hitung('x')">x</button>
+        <button onclick="hitung('/')">/</button>
+        </td>
+        <br>
+        <tr>
+            <td><label>Hasil</label></td><br>
+            <td><input type="text" id="hasil"></td>
+        </tr>
+    </form>
+    <table>
+    <script>
+        function hitung (operasi) {
+            var a1 = parseFloat(document.getElementById('angka1').value);
+            var a2 = parseFloat(document.getElementById('angka2').value); 
+            var hasil = parseFloat(document.getElementById('hasil').value);   
+
+            switch (operasi){
+                case '+':
+                    hasil = a1 + a2;
+                    document.getElementById('hasil').value = hasil;
+                    break;
+                case '-':
+                    hasil = a1 - a2;
+                    document.getElementById('hasil').value = hasil;
+                    break;
+                case 'x':
+                    hasil = a1 * a2;
+                    document.getElementById('hasil').value = hasil;
+                    break;
+                case '/':
+                    hasil = a1 / a2;
+                    document.getElementById('hasil').value = hasil;
+                    break;
+            }
+        }
+    </script>
+    </table>
+</body>
+</html>
